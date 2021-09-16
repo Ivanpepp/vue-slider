@@ -48,6 +48,15 @@ let app = new Vue({
                 },
                 goToImage : function(index){
                     this.indexImg = index;
-                }
-            }
+                },
+                
+            },
+            // created sarebbe quando vine creata l'istanza
+           created : function(){
+               const virtualMachine = this; // stiamo dicendo ti creamo nua variabile locale che equivale all'oggetto vue
+            setInterval(function (){
+                //perche se mettessi il this qui sarebbe windows, che e un concetto primitivo
+                virtualMachine.immagineSuccessiva();
+            },3000)
+           }
     })
