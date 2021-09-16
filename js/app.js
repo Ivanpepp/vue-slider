@@ -45,6 +45,9 @@ let app = new Vue({
                     if(this.indexImg >= this.images.length){
                         this.indexImg = 0;
                     }
+                },
+                goToImage : function(index){
+                    this.indexImg = index;
                 }
             }
     })
